@@ -6,11 +6,13 @@
 //
 
 /// Map the parameter pack with the passed transforming closure.
+@_documentation(visibility: private)
 public func MapPack<each V, each V2>(_ value: repeat each V, transform: repeat (each V) -> (each V2)) -> (repeat each V2) {
     (repeat (each transform)(each value))
 }
 
 /// Map the parameter pack with the passed transforming closure.
+@_documentation(visibility: private)
 public func MapPack<each V, each V2>(_ value: (repeat each V), transform: repeat (each V) -> (each V2)) -> (repeat each V2) {
     (repeat (each transform)(each value))
 }
